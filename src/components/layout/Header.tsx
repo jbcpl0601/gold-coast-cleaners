@@ -44,8 +44,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
         showSolidBackground
-          ? "bg-white/90 backdrop-blur-md shadow-md border-b border-primary/10 py-3"
-          : "bg-transparent py-5",
+          ? "bg-white/50 backdrop-blur-xl shadow-md border-b border-white/60 py-3"
+          : "bg-white/50 backdrop-blur-sm py-5",
       )}>
       <div className="container flex items-center justify-between">
         {/* Logo Section */}
@@ -55,12 +55,12 @@ export function Header() {
           <SiteLogo
             className="absolute top-1 left-4 w-28 h-12 sm:w-32 sm:h-16 md:w-48 md:h-20 transition-transform duration-300 group-hover:scale-105"
             priority
-            variant={showSolidBackground ? "dark" : "light"}
+            variant="dark"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 shadow-sm">
+        <nav className="hidden md:flex items-center gap-1 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200/50 shadow-sm">
           {NAVIGATION_LINKS.map((link) => {
             if (link.name === "Services") {
               return (
@@ -69,9 +69,7 @@ export function Header() {
                     <button
                       className={cn(
                         "relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1 outline-none",
-                        showSolidBackground
-                          ? "text-slate-600 hover:text-primary hover:bg-slate-50"
-                          : "text-white/90 hover:text-white hover:bg-white/10",
+                        "text-slate-600 hover:text-primary hover:bg-slate-50",
                       )}>
                       {link.name}
                       <ChevronDown className="h-3 w-3" />
@@ -103,9 +101,7 @@ export function Header() {
                   "relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
                   pathname === link.href
                     ? "bg-primary/10 text-primary font-semibold"
-                    : showSolidBackground
-                      ? "text-slate-600 hover:text-primary hover:bg-slate-50"
-                      : "text-white/90 hover:text-white hover:bg-white/10",
+                    : "text-slate-600 hover:text-primary hover:bg-slate-50",
                 )}>
                 {link.name}
               </Link>
@@ -120,9 +116,7 @@ export function Header() {
             variant="ghost"
             className={cn(
               "hidden lg:flex font-medium gap-2",
-              showSolidBackground
-                ? "text-slate-700 hover:text-primary hover:bg-primary/5"
-                : "text-white hover:text-white hover:bg-white/20",
+              "text-slate-700 hover:text-primary hover:bg-primary/5",
             )}>
             <a href={SITE_PHONE_HREF}>
               <Phone className="h-4 w-4" />
@@ -134,9 +128,7 @@ export function Header() {
             asChild
             className={cn(
               "rounded-full shadow-lg transition-all hover:-translate-y-0.5",
-              showSolidBackground
-                ? "bg-primary hover:bg-primary/90"
-                : "bg-white text-primary hover:bg-white/90",
+              "bg-primary hover:bg-primary/90",
             )}>
             <Link href="/contact">
               <Calendar className="mr-2 h-4 w-4" />
@@ -151,10 +143,7 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 className={cn(
-                  "md:hidden ml-1",
-                  showSolidBackground
-                    ? "text-slate-900"
-                    : "text-white hover:bg-white/20",
+                  "md:hidden ml-1 text-slate-900",
                 )}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>

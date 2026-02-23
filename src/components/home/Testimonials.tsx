@@ -68,7 +68,7 @@ export function Testimonials() {
   const [headerRef, headerInView] = useInView({ threshold: 0.2 });
 
   return (
-    <section className="py-20 sm:py-32 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 sm:py-32 bg-slate-50 relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
@@ -76,9 +76,9 @@ export function Testimonials() {
       <div className="container relative z-10">
         <div
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-16 fill-mode-both ${
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 fill-mode-both ${
             headerInView
-              ? "animate-in fade-in slide-in-from-bottom-8 duration-700 opacity-100"
+              ? "animate-in fade-in slide-in-from-bottom-8 duration-500 opacity-100"
               : "opacity-0"
           }`}>
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent font-heading">
@@ -101,8 +101,8 @@ export function Testimonials() {
           {marqueeItems.map((t, i) => (
             <div
               key={`${t.name}-${i}`}
-              className="flex-shrink-0 w-[360px] sm:w-[400px]">
-              <div className="h-full rounded-3xl border border-primary/10 bg-white/80 backdrop-blur-sm p-8 shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col gap-5 relative overflow-hidden group/card">
+              className="flex-shrink-0 w-[280px] sm:w-[360px]">
+              <div className="h-full rounded-2xl sm:rounded-3xl border border-primary/10 bg-white/80 backdrop-blur-sm p-5 sm:p-8 shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col gap-4 sm:gap-5 relative overflow-hidden group/card">
                 {/* Decorative quote icon */}
                 <Quote className="absolute top-4 right-4 h-10 w-10 text-primary/5 group-hover/card:text-primary/10 transition-colors duration-500" />
 

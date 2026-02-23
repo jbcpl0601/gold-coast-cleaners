@@ -68,8 +68,8 @@ export function HeroQuoteForm() {
   }
 
   return (
-    <div className="w-full backdrop-blur-sm bg-black/40 border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl">
-      <h3 className="text-xl font-bold text-white mb-4">Get a Free Quote</h3>
+    <div className="w-full backdrop-blur-xl bg-white/70 border border-white/60 p-6 md:p-8 rounded-3xl shadow-2xl">
+      <h3 className="text-xl font-bold text-slate-900 mb-4">Get a Free Quote</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
@@ -78,7 +78,7 @@ export function HeroQuoteForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Full Name" className="bg-white/10 border-white/20 text-white placeholder:text-white/80 focus:bg-white/20 focus:border-accent" {...field} />
+                  <Input placeholder="Full Name" className="bg-white/50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white/80 focus:border-primary" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -92,7 +92,7 @@ export function HeroQuoteForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Email Address" className="bg-white/10 border-white/20 text-white placeholder:text-white/80 focus:bg-white/20 focus:border-accent" {...field} />
+                    <Input placeholder="Email Address" className="bg-white/50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white/80 focus:border-primary" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -104,7 +104,7 @@ export function HeroQuoteForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Phone Number" className="bg-white/10 border-white/20 text-white placeholder:text-white/80 focus:bg-white/20 focus:border-accent" {...field} />
+                    <Input placeholder="Phone Number" className="bg-white/50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white/80 focus:border-primary" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -133,11 +133,11 @@ export function HeroQuoteForm() {
                         className={cn(
                           "cursor-pointer rounded-lg border p-3 flex flex-col items-center justify-center gap-2 text-center transition-all duration-200 h-24",
                           isSelected
-                            ? "border-accent bg-accent/20 text-accent shadow-sm"
-                            : "border-white/20 hover:border-accent/50 bg-white/10 text-white hover:bg-white/20"
+                            ? "border-primary bg-primary/10 text-primary shadow-sm"
+                            : "border-slate-200 hover:border-primary/50 bg-white/50 text-slate-700 hover:bg-white/80"
                         )}
                       >
-                        <service.icon className={cn("h-6 w-6", isSelected ? "text-accent" : "text-white/80")} />
+                        <service.icon className={cn("h-6 w-6", isSelected ? "text-primary" : "text-slate-500")} />
                         <span className="text-xs font-semibold leading-tight">{service.label}</span>
                       </div>
                     );
@@ -160,7 +160,7 @@ export function HeroQuoteForm() {
                   />
                 </FormControl>
                 <div className="space-y-1 leading-none">
-                  <FormLabel className="text-xs text-white/90 font-normal">
+                  <FormLabel className="text-xs text-slate-600 font-normal">
                     I agree to the <span className="underline cursor-pointer">Terms & Conditions</span> and <span className="underline cursor-pointer">Privacy Policy</span>.
                   </FormLabel>
                   <FormMessage />

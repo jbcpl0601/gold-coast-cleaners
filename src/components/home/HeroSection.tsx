@@ -34,13 +34,13 @@ export function HeroSection() {
         <div className="container px-4 md:px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
             {/* Right Column: Quote Form — hidden on small/medium, visible side-by-side on lg+ */}
-            <div className="hidden lg:flex w-full max-w-md mx-auto lg:ml-auto animate-in fade-in slide-in-from-right-8 duration-1000 delay-100 order-2">
+            <div className="hidden lg:flex w-full max-w-md mx-auto lg:ml-auto animate-in fade-in slide-in-from-right-8 duration-500 delay-75 order-2">
               <HeroQuoteForm />
             </div>
 
             {/* Left Column: Text Content */}
-            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-1000 order-1 text-center lg:text-left mx-auto lg:mx-0">
-              <div className="backdrop-blur-sm bg-black/40 border border-white/10 p-5 sm:p-7 md:p-8 rounded-3xl shadow-2xl">
+            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-500 order-1 text-center lg:text-left mx-auto lg:mx-0">
+              <div className="backdrop-blur-sm bg-black/40 border border-white/10 p-4 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl shadow-2xl">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-5 drop-shadow-lg leading-tight">
                   Gold Coast&apos;s Trusted{" "}
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">
@@ -52,7 +52,7 @@ export function HeroSection() {
                   Professional End-of-Lease Cleaning That Helps You Secure Your
                   Full Bond Refund.
                 </p>
-                <ul className="space-y-2 sm:space-y-3 mb-5 sm:mb-7 text-left">
+                <ul className="space-y-1.5 sm:space-y-3 mb-4 sm:mb-7 text-left">
                   {[
                     "100% Bond Back Focused",
                     "Experienced Local Cleaners",
