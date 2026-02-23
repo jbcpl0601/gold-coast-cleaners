@@ -96,16 +96,12 @@ h6 {
   }
 }
 
-/* Testimonials marquee */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-.animate-marquee {
-  animation: marquee 40s linear infinite;
+/* Hide scrollbar for touch-scrollable sections */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }

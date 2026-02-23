@@ -17,8 +17,8 @@ import {
 import { useInView } from "@/hooks/use-in-view";
 
 export function OurServices() {
-  const [headerRef, headerInView] = useInView({ threshold: 0.2 });
-  const [gridRef, gridInView] = useInView({ threshold: 0.1 });
+  const [headerRef, headerInView] = useInView({ threshold: 0.1 });
+  const [gridRef, gridInView] = useInView({ threshold: 0.05 });
 
   return (
     <section className="py-12 sm:py-32 bg-secondary/30 relative overflow-hidden">
@@ -51,7 +51,7 @@ export function OurServices() {
                 key={service.title}
                 className={`group flex flex-col overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-3xl bg-card/50 backdrop-blur-sm fill-mode-both ${gridInView ? "animate-in fade-in slide-in-from-bottom-12 opacity-100" : "opacity-0"}`}
                 style={{
-                  animationDelay: `${(index + 1) * 75}ms`,
+                  animationDelay: `${(index % 3) * 100}ms`,
                   animationDuration: "400ms",
                 }}>
                 {image && (
@@ -62,7 +62,8 @@ export function OurServices() {
                       alt={image.description}
                       fill
                       className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                      data-ai-hint={image.imageHint}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={index <= 2}
                     />
                   </div>
                 )}

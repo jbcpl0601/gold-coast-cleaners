@@ -9,7 +9,7 @@ export function HeroSection() {
     // h-[100dvh] = hard cap at true viewport height (dvh accounts for mobile browser chrome).
     // overflow-hidden ensures nothing bleeds outside.
     // flex flex-col so the spacer + content stack vertically within the fixed height.
-    <section className="relative h-[100dvh] w-full overflow-hidden flex flex-col">
+    <section className="relative min-h-[100dvh] lg:h-[100dvh] w-full overflow-auto lg:overflow-hidden flex flex-col">
       {/* Background video */}
       <video
         autoPlay
@@ -30,11 +30,11 @@ export function HeroSection() {
       <div className="relative h-20 sm:h-24 shrink-0" />
 
       {/* Content — flex-1 fills the remaining viewport below the spacer */}
-      <div className="relative flex-1 flex items-center py-6 lg:py-0 overflow-hidden">
+      <div className="relative flex-1 flex items-center py-6 lg:py-0">
         <div className="container px-4 md:px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
-            {/* Right Column: Quote Form — hidden on small/medium, visible side-by-side on lg+ */}
-            <div className="hidden lg:flex w-full max-w-md mx-auto lg:ml-auto animate-in fade-in slide-in-from-right-8 duration-500 delay-75 order-2">
+            {/* Right Column: Quote Form — hidden on mobile, side-by-side on lg+ */}
+            <div className="w-full max-w-md mx-auto lg:ml-auto animate-in fade-in slide-in-from-right-8 duration-500 delay-75 order-2">
               <HeroQuoteForm />
             </div>
 
@@ -85,7 +85,7 @@ export function HeroSection() {
                     </a>
                   </Button>
 
-                  {/* Only shown on smaller screens where the inline form is hidden */}
+                  {/* Mobile CTA — shown only on smaller screens where the form is hidden */}
                   <div className="lg:hidden w-full sm:w-auto">
                     <Button
                       asChild

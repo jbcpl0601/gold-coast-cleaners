@@ -68,6 +68,7 @@ export function ServiceArea() {
                 alt="Gold Coast Service Areas"
                 fill
                 className="object-fill p-[0.5px]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -85,6 +86,7 @@ export function ServiceArea() {
                 alt="Brisbane Service Areas"
                 fill
                 className="object-fill p-[0.5px]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

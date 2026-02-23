@@ -26,6 +26,7 @@ import { useEffect, useState } from "react";
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,7 +138,7 @@ export function Header() {
           </Button>
 
           {/* Mobile Menu */}
-          <Sheet>
+          <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
@@ -152,7 +153,7 @@ export function Header() {
             <SheetContent
               side="right"
               className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full overflow-y-auto">
                 <div className="flex items-center gap-2 mb-8">
                   <SiteLogo
                     className="h-10"
@@ -175,6 +176,7 @@ export function Header() {
                               <Link
                                 key={service.href}
                                 href={service.href}
+                                onClick={() => setSheetOpen(false)}
                                 className={cn(
                                   "p-3 rounded-lg transition-all text-sm font-medium",
                                   pathname === service.href
@@ -192,6 +194,7 @@ export function Header() {
                       <Link
                         key={link.href}
                         href={link.href}
+                        onClick={() => setSheetOpen(false)}
                         className={cn(
                           "flex items-center justify-between p-4 rounded-xl transition-all",
                           pathname === link.href

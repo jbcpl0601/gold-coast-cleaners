@@ -58,6 +58,7 @@ export function WhyChooseUs() {
                 alt="Our Professional Cleaning Team"
                 fill
                 className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-accent/30 rounded-full blur-3xl shadow-primary/20" />
