@@ -30,7 +30,7 @@ export function OurServices() {
         <div
           ref={headerRef}
           className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 transition-opacity duration-500 ${headerInView ? "animate-in fade-in slide-in-from-bottom-8 opacity-100" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight sm:text-5xl mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight sm:text-5xl mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent pb-2">
             Our Professional Cleaning Services
           </h2>
           <p className="text-base sm:text-xl text-muted-foreground/80 leading-relaxed">
@@ -47,8 +47,8 @@ export function OurServices() {
             "Carpet Steam Cleaning",
             "Spring Cleaning",
             "Pest Control",
-            "Oven & Barbeque Cleaning",
-            "Airbnb Cleaning"
+            "Oven & BBQ Cleaning",
+            "AirBnB Cleaning"
           ].includes(service.title)).map((service, index) => {
             const image = PlaceHolderImages.find(
               (img) => img.id === service.imagePlaceholder,

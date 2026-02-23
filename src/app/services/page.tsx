@@ -421,14 +421,14 @@ export default function ServicesPage() {
         },
         {
           id: "airbnb-cleaning",
-          title: "Airbnb Cleaning",
-          desc: "Keep your short-stay property in perfect condition with our fast, reliable Airbnb turnaround cleans. We work around your booking schedule to ensure every guest arrives to a spotless property.",
+          title: "AirBnB Cleaning",
+          desc: "Keep your short-stay property in perfect condition with our fast, reliable AirBnB turnaround cleans. We work around your booking schedule to ensure every guest arrives to a spotless property.",
           features: airbnbFeatures,
           img: getImage("airbnb-cleaning"),
         },
         {
           id: "oven-bbq-cleaning",
-          title: "Oven & Barbeque Cleaning",
+          title: "Oven & BBQ Cleaning",
           desc: "Restore your oven and BBQ to like-new condition with our professional degreasing service. We remove heavy build-up, carbon residue, and stubborn grease using powerful food-safe cleaning agents.",
           features: ovenBbqFeatures,
           img: getImage("oven-bbq-cleaning"),

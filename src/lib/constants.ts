@@ -90,14 +90,14 @@ export const SERVICES = [
     imagePlaceholder: "pool-maintenance",
   },
   {
-    title: "Airbnb Cleaning",
+    title: "AirBnB Cleaning",
     description:
       "Fast, thorough turnaround cleans to keep your short-stay property guest-ready every time.",
     href: "/services#airbnb-cleaning",
     imagePlaceholder: "airbnb-cleaning",
   },
   {
-    title: "Oven & Barbeque Cleaning",
+    title: "Oven & BBQ Cleaning",
     description:
       "Professional degreasing and restoration of ovens and BBQ grills to like-new condition.",
     href: "/services#oven-bbq-cleaning",

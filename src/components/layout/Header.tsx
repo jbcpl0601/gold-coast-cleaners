@@ -45,8 +45,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
         showSolidBackground
-          ? "bg-white/50 backdrop-blur-xl shadow-md border-b border-white/60 py-3"
-          : "bg-white/50 backdrop-blur-sm py-5",
+          ? "bg-white/50 backdrop-blur-xl shadow-md border-b border-white/60 py-3 sm:py-5"
+          : "bg-white/50 backdrop-blur-xl py-3 sm:py-5",
       )}>
       <div className="container flex items-center justify-between">
         {/* Logo Section */}
@@ -129,10 +129,10 @@ export function Header() {
             asChild
             className={cn(
               "rounded-full shadow-lg transition-all hover:-translate-y-0.5",
-              "bg-primary hover:bg-primary/90",
+              "bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 h-8 sm:h-10",
             )}>
-            <Link href="/contact">
-              <Calendar className="mr-2 h-4 w-4" />
+            <Link href="/contact" className="flex items-center">
+              <Calendar className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
               Book Now
             </Link>
           </Button>

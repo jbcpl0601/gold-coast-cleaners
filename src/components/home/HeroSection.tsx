@@ -1,8 +1,7 @@
-import { Check, Phone, Calendar } from "lucide-react";
+import { Check, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import { SITE_PHONE_HREF } from "@/lib/constants";
 import { HeroQuoteForm } from "../forms/HeroQuoteForm";
-import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -43,7 +42,7 @@ export function HeroSection() {
               <div className="backdrop-blur-sm bg-black/40 border border-white/10 p-4 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl shadow-2xl">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-5 drop-shadow-lg leading-tight">
                   Gold Coast&apos;s Trusted{" "}
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">
+                  <span className="bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent bg-gradient-to-r from-accent via-white to-accent">
                     Bond Cleaning
                   </span>{" "}
                   Experts
@@ -85,18 +84,7 @@ export function HeroSection() {
                     </a>
                   </Button>
 
-                  {/* Mobile CTA — shown only on smaller screens where the form is hidden */}
-                  <div className="lg:hidden w-full sm:w-auto">
-                    <Button
-                      asChild
-                      size="lg"
-                      className="w-full sm:w-auto rounded-full text-sm sm:text-base px-6 py-5 bg-accent hover:bg-accent/90 text-white transition-all hover:-translate-y-0.5">
-                      <Link href="/contact">
-                        <Calendar className="mr-2 h-4 w-4" />
-                        Get Free Quote
-                      </Link>
-                    </Button>
-                  </div>
+
                 </div>
               </div>
             </div>
