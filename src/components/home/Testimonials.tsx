@@ -129,7 +129,7 @@ export function Testimonials() {
               ? "animate-in fade-in slide-in-from-bottom-8 duration-500 opacity-100"
               : "opacity-0"
           }`}>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent font-heading">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent font-playfair">
             What Our Clients Say
           </h2>
           <p className="text-xl text-muted-foreground/80 leading-relaxed">
@@ -193,7 +193,7 @@ export function Testimonials() {
                   </div>
 
                   {/* Quote Text */}
-                  <p className="text-slate-700 leading-relaxed text-[15px] flex-grow relative z-10 font-medium">
+                  <p className="text-slate-700 leading-relaxed text-[16px] flex-grow relative z-10 font-playfair italic">
                     "{t.quote}"
                   </p>
                 </div>

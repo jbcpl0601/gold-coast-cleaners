@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import { Inter, Outfit, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/Header';
@@ -9,6 +9,7 @@ import { FloatingCallButton } from '@/components/layout/FloatingCallButton';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-heading' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
   title: 'James Bond Cleaning | Trusted Bond Cleaning on the Gold Coast',
@@ -35,7 +36,8 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           inter.variable,
-          outfit.variable
+          outfit.variable,
+          playfair.variable
         )}
       >
         <Header />

@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { OurServices } from "@/components/home/OurServices";
+import { BondCleaningChecklist } from "@/components/home/BondCleaningChecklist";
 import { ServiceArea } from "@/components/home/ServiceArea";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <WhyChooseUs />
       <OurServices />
+      <BondCleaningChecklist />
       <ServiceArea />
       <HowItWorks />
       <Testimonials />

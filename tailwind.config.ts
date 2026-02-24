@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         sans: ['var(--font-body)', 'sans-serif'],
         heading: ['var(--font-heading)', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

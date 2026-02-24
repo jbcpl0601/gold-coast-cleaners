@@ -34,18 +34,32 @@ export const SERVICES = [
     imagePlaceholder: "spring-cleaning",
   },
   {
-    title: "Deep Cleaning",
-    description:
-      "Intensive cleaning to restore your property to a pristine condition.",
-    href: "/services#deep-cleaning",
-    imagePlaceholder: "deep-cleaning",
-  },
-  {
     title: "Pest Control",
     description:
       "Professional pest management services to keep your home safe and bug-free.",
     href: "/services#pest-control",
     imagePlaceholder: "pest-control",
+  },
+  {
+    title: "Oven & BBQ Cleaning",
+    description:
+      "Professional degreasing and restoration of ovens and BBQ grills to like-new condition.",
+    href: "/services#oven-bbq-cleaning",
+    imagePlaceholder: "oven-bbq-cleaning",
+  },
+  {
+    title: "AirBnB Cleaning",
+    description:
+      "Fast, thorough turnaround cleans to keep your short-stay property guest-ready every time.",
+    href: "/services#airbnb-cleaning",
+    imagePlaceholder: "airbnb-cleaning",
+  },
+  {
+    title: "Deep Cleaning",
+    description:
+      "Intensive cleaning to restore your property to a pristine condition.",
+    href: "/services#deep-cleaning",
+    imagePlaceholder: "deep-cleaning",
   },
   {
     title: "Builder Cleaning",
@@ -62,20 +76,6 @@ export const SERVICES = [
     imagePlaceholder: "upholstery-cleaning",
   },
   {
-    title: "Removalist",
-    description:
-      "Safe, reliable, and efficient moving services for a stress-free relocation.",
-    href: "/services#removalist",
-    imagePlaceholder: "removalist",
-  },
-  {
-    title: "Painting",
-    description:
-      "High-quality residential and commercial painting services to transform your space.",
-    href: "/services#painting",
-    imagePlaceholder: "painting",
-  },
-  {
     title: "Pressure Washing",
     description:
       "Powerful exterior cleaning for driveways, pathways, and building facades.",
@@ -90,18 +90,18 @@ export const SERVICES = [
     imagePlaceholder: "pool-maintenance",
   },
   {
-    title: "AirBnB Cleaning",
+    title: "Removalist",
     description:
-      "Fast, thorough turnaround cleans to keep your short-stay property guest-ready every time.",
-    href: "/services#airbnb-cleaning",
-    imagePlaceholder: "airbnb-cleaning",
+      "Safe, reliable, and efficient moving services for a stress-free relocation.",
+    href: "/services#removalist",
+    imagePlaceholder: "removalist",
   },
   {
-    title: "Oven & BBQ Cleaning",
+    title: "Painting",
     description:
-      "Professional degreasing and restoration of ovens and BBQ grills to like-new condition.",
-    href: "/services#oven-bbq-cleaning",
-    imagePlaceholder: "oven-bbq-cleaning",
+      "High-quality residential and commercial painting services to transform your space.",
+    href: "/services#painting",
+    imagePlaceholder: "painting",
   },
 ];
 
