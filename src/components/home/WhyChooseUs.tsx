@@ -51,7 +51,7 @@ export function WhyChooseUs() {
           <div
             ref={imageRef}
             className={`relative group fill-mode-both ${imageInView ? "animate-in fade-in slide-in-from-left-12 duration-500 opacity-100" : "opacity-0"}`}>
-            <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl transform -rotate-3 transition-transform group-hover:rotate-0 duration-700" />
+
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/20">
               <Image
                 src="/images/why-choose-us-team.png"
@@ -61,7 +61,16 @@ export function WhyChooseUs() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-accent/30 rounded-full blur-3xl shadow-primary/20" />
+
+            
+            {/* Satisfaction Badge */}
+            <div className={`mt-10 flex justify-center fill-mode-both ${imageInView ? "animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 opacity-100" : "opacity-0"}`}>
+              <img 
+                src="/images/satisfaction-badge.png" 
+                alt="100% Satisfaction Guaranteed" 
+                className="w-32 h-32 md:w-48 md:h-48 object-contain hover:scale-110 transition-transform duration-500 cursor-pointer" 
+              />
+            </div>
           </div>
 
           <div ref={contentRef}>

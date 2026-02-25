@@ -9,6 +9,8 @@ export const NAVIGATION_LINKS = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Suburbs", href: "/suburbs" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
