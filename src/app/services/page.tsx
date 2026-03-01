@@ -36,7 +36,7 @@ import { CtaStrip } from "@/components/home/CtaStrip";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Services | James Bond Cleaning Gold Coast",
+  title: "Our Services",
   description:
     "Professional cleaning and maintenance services on the Gold Coast including bond cleaning, carpet cleaning, pest control, painting, and more.",
 };

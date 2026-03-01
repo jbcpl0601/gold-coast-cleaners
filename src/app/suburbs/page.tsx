@@ -1,11 +1,11 @@
-import { ServiceArea } from '@/components/home/ServiceArea';
-import { CtaStrip } from '@/components/home/CtaStrip';
-import type { Metadata } from 'next';
+import { ServiceArea } from "@/components/home/ServiceArea";
+import { CtaStrip } from "@/components/home/CtaStrip";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Service Areas | James Bond Cleaning',
+  title: "Service Areas",
   description:
-    'We provide professional cleaning services across Gold Coast and Brisbane. Check out our service areas.',
+    "We provide professional cleaning services across Gold Coast and Brisbane. Check out our service areas.",
 };
 
 export default function SuburbsPage() {
