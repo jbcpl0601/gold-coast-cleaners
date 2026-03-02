@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
-import { DynamicQuoteForm } from "@/components/forms/quote/DynamicQuoteForm";
+import { HeroQuoteForm } from "@/components/forms/HeroQuoteForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   SITE_EMAIL,
@@ -38,14 +38,11 @@ export default function ContactPage() {
             <Card className="group border border-primary/20 shadow-sm hover:shadow-2xl hover:border-primary/40 transition-all duration-500 rounded-2xl bg-gradient-to-br from-white/80 to-primary/10 backdrop-blur-md overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
               <CardContent className="p-8 relative z-10">
-                <div className="mb-6">
-                  <h3 className="font-bold text-2xl text-slate-900 leading-tight group-hover:text-primary transition-colors">
-                    Request a Quote Online
-                  </h3>
-                  <div className="mt-2 h-0.5 w-12 bg-primary/20 group-hover:w-32 transition-all duration-500" />
-                </div>
                 <Suspense fallback={<div>Loading form...</div>}>
-                  <DynamicQuoteForm />
+                  <HeroQuoteForm
+                    title="Send us a message"
+                    redirectOnSubmit={false}
+                  />
                 </Suspense>
               </CardContent>
             </Card>

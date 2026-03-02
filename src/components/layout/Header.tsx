@@ -14,6 +14,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { HeroQuoteForm } from "@/components/forms/HeroQuoteForm";
+import {
   NAVIGATION_LINKS,
   SITE_NAME,
   SITE_PHONE_HREF,
@@ -27,6 +34,7 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [isBookModalOpen, setIsBookModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -125,27 +133,38 @@ export function Header() {
             </a>
           </Button>
 
-          <Button
-            asChild
-            className={cn(
-              "rounded-full shadow-lg transition-all hover:-translate-y-0.5",
-              "bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 h-8 sm:h-10",
-            )}>
-            <Link href="/contact" className="flex items-center">
-              <Calendar className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-              Book Now
-            </Link>
-          </Button>
+          <Dialog
+            open={isBookModalOpen}
+            onOpenChange={setIsBookModalOpen}>
+            <DialogTrigger asChild>
+              <Button
+                className={cn(
+                  "rounded-full shadow-lg transition-all hover:-translate-y-0.5",
+                  "bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 h-8 sm:h-10 cursor-pointer",
+                )}>
+                <Calendar className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                Book Now
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px] md:max-w-[550px] p-0 border-none bg-transparent shadow-none">
+              <DialogTitle className="sr-only">Book Now</DialogTitle>
+              <HeroQuoteForm
+                title="Quick Request"
+                redirectOnSubmit={true}
+                onSuccess={() => setIsBookModalOpen(false)}
+              />
+            </DialogContent>
+          </Dialog>
 
           {/* Mobile Menu */}
-          <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+          <Sheet
+            open={sheetOpen}
+            onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn(
-                  "md:hidden ml-1 text-slate-900",
-                )}>
+                className={cn("md:hidden ml-1 text-slate-900")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
