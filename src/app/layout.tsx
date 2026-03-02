@@ -38,12 +38,21 @@ export const metadata: Metadata = {
     description:
       "Professional end-of-lease cleaning on the Gold Coast that helps you secure your full bond refund. Reliable, detail-oriented, and real estate-approved.",
     siteName: "James Bond Cleaning",
+    images: [
+      {
+        url: "/logos/JBC-logo-JB-with-full-name-noBG.png",
+        width: 1200,
+        height: 630,
+        alt: "James Bond Cleaning Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "James Bond Cleaning | Trusted Bond Cleaning on the Gold Coast",
     description:
       "Professional end-of-lease cleaning on the Gold Coast that helps you secure your full bond refund.",
+    images: ["/logos/JBC-logo-JB-with-full-name-noBG.png"],
   },
   alternates: {
     canonical: "/",
