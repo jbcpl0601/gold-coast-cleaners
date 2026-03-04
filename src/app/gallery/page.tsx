@@ -49,7 +49,7 @@ export default async function GalleryPage() {
                 <div
                   key={index}
                   className="break-inside-avoid relative rounded-2xl overflow-hidden shadow-md group cursor-pointer hover:shadow-xl transition-all duration-300 ring-1 ring-slate-900/5 bg-white transform hover:-translate-y-1">
-                  <div className="aspect-auto">
+                  <div className="aspect-auto relative">
                     <Image
                       src={`/images/gallery/${img}`}
                       alt={`Cleaning gallery image ${index + 1}`}
@@ -58,6 +58,15 @@ export default async function GalleryPage() {
                       className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
+                    <div className="absolute bottom-0 left-0 w-full bg-slate-900/0 backdrop-blur-sm py-2 px-4 flex justify-center items-center pointer-events-none z-10 transition-opacity duration-300 group-hover:bg-slate-900/40">
+                      <Image
+                        src="/logos/JBC-logo-JB-with-full-name-noBG.png"
+                        alt="Watermark"
+                        width={150}
+                        height={50}
+                        className="w-auto h-8 sm:h-10 drop-shadow-md opacity-90"
+                      />
+                    </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
