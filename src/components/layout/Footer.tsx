@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import { Sparkles, Mail, MapPin, Phone } from 'lucide-react';
+import Link from "next/link";
+import { SiteLogo } from "@/components/SiteLogo";
+import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import {
   NAVIGATION_LINKS,
   OPENING_HOURS,
@@ -9,7 +10,10 @@ import {
   SITE_NAME,
   SITE_PHONE_HREF,
   SITE_PHONE_NUMBER,
-} from '@/lib/constants';
+  SITE_ADDRESS,
+  SITE_INSTAGRAM_HREF,
+  SITE_FACEBOOK_HREF,
+} from "@/lib/constants";
 
 export function Footer() {
   const serviceLinks = SERVICES.map((service) => ({
@@ -23,9 +27,13 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-              <Sparkles className="h-6 w-6 text-primary" />
-              <span>{SITE_NAME}</span>
+            <Link
+              href="/"
+              className="flex items-center gap-2 font-bold text-xl">
+              <SiteLogo
+                priority
+                className="h-24 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground">
               Your trusted partner for reliable and professional cleaning
@@ -40,8 +48,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                    className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -56,8 +63,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                    className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -68,16 +74,15 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact & Hours</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>Service Area: Gold Coast</span>
+              <li className="flex items-start gap-2 max-w-[200px]">
+                <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" />
+                <span>{SITE_ADDRESS}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <a
                   href={SITE_PHONE_HREF}
-                  className="hover:text-primary transition-colors"
-                >
+                  className="hover:text-primary transition-colors">
                   {SITE_PHONE_NUMBER}
                 </a>
               </li>
@@ -85,8 +90,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-primary" />
                 <a
                   href={SITE_EMAIL_HREF}
-                  className="hover:text-primary transition-colors"
-                >
+                  className="hover:text-primary transition-colors">
                   {SITE_EMAIL}
                 </a>
               </li>
@@ -95,12 +99,42 @@ export function Footer() {
                 <p>{OPENING_HOURS.hours}</p>
               </li>
             </ul>
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href={SITE_FACEBOOK_HREF}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 text-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a
+                href={SITE_INSTAGRAM_HREF}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 text-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
