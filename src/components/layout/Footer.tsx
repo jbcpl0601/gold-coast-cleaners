@@ -29,6 +29,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link
               href="/"
+              aria-label="Home"
               className="flex items-center gap-2 font-bold text-xl">
               <SiteLogo
                 priority
@@ -104,6 +105,7 @@ export function Footer() {
                 href={SITE_FACEBOOK_HREF}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Facebook"
                 className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
@@ -112,6 +114,7 @@ export function Footer() {
                 href={SITE_INSTAGRAM_HREF}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram"
                 className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>

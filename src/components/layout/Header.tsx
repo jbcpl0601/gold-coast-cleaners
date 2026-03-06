@@ -60,6 +60,7 @@ export function Header() {
         {/* Logo Section */}
         <Link
           href="/"
+          aria-label="Home"
           className="">
           <SiteLogo
             className="absolute top-1 left-4 w-28 h-12 sm:w-32 sm:h-16 md:w-48 md:h-20 transition-transform duration-300 group-hover:scale-105"
@@ -127,7 +128,9 @@ export function Header() {
               "hidden lg:flex font-medium gap-2",
               "text-slate-700 hover:text-primary hover:bg-primary/5",
             )}>
-            <a href={SITE_PHONE_HREF}>
+            <a
+              href={SITE_PHONE_HREF}
+              aria-label="Call Us">
               <Phone className="h-4 w-4" />
               <span className="hidden xl:inline">{SITE_PHONE_NUMBER}</span>
             </a>
