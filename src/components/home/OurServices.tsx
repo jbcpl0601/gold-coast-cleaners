@@ -94,6 +94,7 @@ export function OurServices() {
                     className="p-0 text-primary group-hover:text-accent transition-colors font-semibold text-lg hover:bg-transparent">
                     <Link
                       href={service.href}
+                      aria-label={`Learn more about ${service.title}`}
                       className="flex items-center gap-2">
                       Learn More{" "}
                       <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
