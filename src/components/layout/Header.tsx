@@ -61,16 +61,16 @@ export function Header() {
         <Link
           href="/"
           aria-label="Home"
-          className="">
+          className="z-10 relative">
           <SiteLogo
-            className="absolute top-1 left-4 w-28 h-12 sm:w-32 sm:h-16 md:w-48 md:h-20 transition-transform duration-300 group-hover:scale-105"
+            className="w-28 h-12 sm:w-32 sm:h-16 lg:w-48 lg:h-20 transition-transform duration-300 group-hover:scale-105"
             priority
             variant="dark"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200/50 shadow-sm">
+        <nav className="hidden lg:flex items-center gap-1 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200/50 shadow-sm">
           {NAVIGATION_LINKS.map((link) => {
             if (link.name === "Services") {
               return (
@@ -123,16 +123,16 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Button
             asChild
-            variant="ghost"
             className={cn(
-              "hidden lg:flex font-medium gap-2",
-              "text-slate-700 hover:text-primary hover:bg-primary/5",
+              "hidden xl:flex items-center gap-3 rounded-full bg-primary text-white border-2 border-primary hover:bg-slate-900 hover:border-slate-900 hover:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 pl-1 pr-6 py-1 h-12 sm:h-14 cursor-pointer",
             )}>
             <a
               href={SITE_PHONE_HREF}
               aria-label="Call Us">
-              <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">{SITE_PHONE_NUMBER}</span>
+              <div className="bg-white rounded-full p-2.5 flex items-center justify-center shadow-sm shrink-0">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary fill-current" />
+              </div>
+              <span className="font-bold text-base whitespace-nowrap">{SITE_PHONE_NUMBER}</span>
             </a>
           </Button>
 
@@ -141,16 +141,19 @@ export function Header() {
             onOpenChange={setIsBookModalOpen}>
             <DialogTrigger asChild>
               <Button
+                variant="outline"
                 className={cn(
-                  "rounded-full shadow-lg transition-all hover:-translate-y-0.5",
-                  "bg-primary hover:bg-primary/90 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 h-8 sm:h-10 cursor-pointer",
+                  "group rounded-full border-2 border-slate-900 bg-white text-slate-900 shadow-md transition-all duration-300 hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-0.5",
+                  "pl-1 pr-5 sm:pr-6 py-1 h-12 sm:h-14 cursor-pointer flex items-center gap-3",
                 )}>
-                <Calendar className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                Book Now
+                <div className="bg-white rounded-full p-2.5 flex items-center justify-center border border-slate-200 group-hover:border-transparent group-hover:shadow-sm shrink-0 transition-all">
+                  <Calendar className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                </div>
+                <span className="font-bold text-sm sm:text-base whitespace-nowrap">Get a Quote</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] md:max-w-[550px] p-0 border-none bg-transparent shadow-none">
-              <DialogTitle className="sr-only">Book Now</DialogTitle>
+              <DialogTitle className="sr-only">Get a Quote</DialogTitle>
               <HeroQuoteForm
                 title="Quick Request"
                 redirectOnSubmit={true}
@@ -167,7 +170,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn("md:hidden ml-1 text-slate-900")}>
+                className={cn("lg:hidden ml-1 text-slate-900")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
@@ -242,7 +245,7 @@ export function Header() {
                       className="w-full gap-2 shadow-sm"
                       size="lg">
                       <a href={SITE_PHONE_HREF}>
-                        <Phone className="h-4 w-4" />
+                        <Phone className="h-5 w-5 fill-current" />
                         Call {SITE_PHONE_NUMBER}
                       </a>
                     </Button>
