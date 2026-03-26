@@ -60,6 +60,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    other: {
+      "dmca-site-verification": "WERaTVQwS0N0TWF1UTZMWGJWa2ZSL1dJdW4wSWgrMzh2SVg1TXRIQnNUTT01",
+    },
+  },
 };
 
 export default function RootLayout({
